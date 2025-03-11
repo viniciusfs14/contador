@@ -1,0 +1,26 @@
+docs_dir: docs
+
+site_name: Nós 💚
+site_url: https://viniciusfs14.github.io/contador/
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: white
+    accent: red
+  font:
+    text: "Merriweather"
+    code: "Fira Code"
+  icon:
+    logo: fontawesome/solid/heart
+    
+nav:
+  - Início: inicio.md
+
+extra_css:
+  - styles/custom.css
+
+extra_javascript:
+  - js/contador.js
+

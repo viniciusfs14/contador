@@ -1,0 +1,26 @@
+/* Fundo suave e romântico */
+body {
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+}
+
+/* Estilizando os títulos */
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff3366;
+}
+
+/* Bordas arredondadas para caixas de texto */
+.md-content {
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff5f8;
+}
+
+/* Links em tom romântico */
+a {
+    color: #ff4081;
+}
+
+a:hover {
+    color: #c2185b;
+}
