@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
 
         document.getElementById("contador").innerHTML = `
-            <p><span> Estou sendo o cara mais feliz do mundo ao seu lado faz
+            <p><span> Estou sendo o cara mais feliz do mundo ao seu lado há
             <p><span>${dias}</span> dias <span>${horas}</span>h <span>${minutos}</span>m <span>${segundos}</span>s
         `;
     }
