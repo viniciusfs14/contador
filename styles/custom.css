@@ -28,3 +28,10 @@ a:hover {
 .md-content p {
     text-align: center;
 }
+
+.container {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente no centro */
+    align-items: center; /* Alinha verticalmente no centro, caso necessário */
+     /* Ajuste conforme necessário */
+}
