@@ -24,3 +24,7 @@ a {
 a:hover {
     color: #c2185b;
 }
+
+.md-content p {
+    text-align: center;
+}

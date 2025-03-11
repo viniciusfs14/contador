@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
         const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
 
-        document.getElementById("contador").innerHTML = `Já se passaram ${dias} dias, ${horas}h ${minutos}m ${segundos}s desde que estamos juntos.`;
+        document.getElementById("contador").innerHTML = `
+            <p><span>${dias}</span> dias, <span>${horas}</span>h <span>${minutos}</span>m <span>${segundos}</span>s
+        `;
     }
 
     atualizarContador();
