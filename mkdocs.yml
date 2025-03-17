@@ -10,17 +10,21 @@ theme:
     primary: white
     accent: red
   font:
-    text: "Merriweather"
-    code: "Fira Code"
+    text: "Roboto"
+    code: "Courier New"
   icon:
     logo: fontawesome/solid/heart
     
 nav:
-  - Início: inicio.md
+  - Nós 💚: inicio.md
+  - Linha: linha.md
 
 extra_css:
   - styles/custom.css
+  - assets/custom.css
+  - assets/sara.css
 
 extra_javascript:
   - js/contador.js
+  
 

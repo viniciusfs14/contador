@@ -1,41 +1,24 @@
-Dias, horas, minutos e segundos desde que estamos juntos:
+<p style="text-align: left;">Sara,</p>
 
-<div id="contador" style="font-size: 1.5em; color: #ff3366; font-weight: bold;"></div>
+<p style="text-align: justify;">Eu poderia passar horas tentando explicar o quanto você significa para mim, mas acho que esse contador diz tudo. Cada segundo ao seu lado é um presente, e cada momento que passa só faz com que eu te admire e te ame mais. O tempo ao seu lado não é só uma contagem, é uma história sendo escrita, cheia de amor, risos e memórias incríveis.
 
-<script src="/js/contador.js"></script>
+Com você, cada dia é uma nova chance de ser feliz. Não importa quanto tempo se passe, cada instante ao seu lado é único, e eu sou grato por todos eles. Você faz o meu mundo ser mais colorido, mais leve, mais bonito.
 
-## Nossa Trilha Sonora 🎶  
+Eu sei que juntos podemos realizar tudo o que sonhamos, seja agora ou no futuro. Vou estar ao seu lado em todos os momentos, nos mais felizes e também nos desafiadores, apoiando e incentivando você a seguir em frente. O que eu mais quero é construir uma vida cheia de conquistas, amor e risos com você, porque sei que ao seu lado, tudo é possível.
+</p>
 
-Clique no botão para ouvir nossa música especial:  
+<p style="text-align: left;">Eu Te amo, hoje e sempre ❤️💚</p>
 
-<button id="playMusic" style="font-size: 1.2em; padding: 10px 20px; background-color: #ff3366; color: white; border: none; border-radius: 5px; cursor: pointer;">
-    ▶️ Iniciar Música
-</button>
+<p style="text-align: left;">Com carinho, seu namorado, Vinícius Fernandes 🤠</p>
 
-<audio id="musica">
-    <source src="/music/musga.mp3" type="audio/mpeg">
-</audio>
+<div class="container">
+    <div id="contador">
+        <span>1234</span>
+        <p>Contador</p>
+    </div>
+</div>
 
-<script>
-document.getElementById("playMusic").addEventListener("click", function() {
-    var audio = document.getElementById("musica");
-    audio.play();
-});
-</script>
+<script src="js/contador.js"></script>
 
-<!-- Controle de volume -->
-<label for="volumeControl" style="font-size: 1.2em;">🔊 Volume:</label>
-<input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5" style="width: 150px;">
+![Texto alternativo](imgs/felicidade.png)
 
-<script>
-document.getElementById("playMusic").addEventListener("click", function() {
-    var audio = document.getElementById("musica");
-    audio.play();
-});
-
-// Ajuste de volume
-document.getElementById("volumeControl").addEventListener("input", function() {
-    var audio = document.getElementById("musica");
-    audio.volume = this.value;
-});
-</script>

@@ -1,0 +1,38 @@
+
+#contador {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    background: linear-gradient(45deg, #ff8c00, #e52e71);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    animation: fadeIn 1s ease-out;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#contador span {
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#contador p {
+    margin: 0;
+    font-size: 18px;
+}
+
+
