@@ -14,6 +14,8 @@
         <link rel="prev" href="../inicio/">
       
       
+        <link rel="next" href="../surpresa/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
@@ -74,11 +76,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#presente-virtual" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -231,8 +228,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -244,6 +239,26 @@
 
       </a>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../surpresa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Surpresa
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -265,8 +280,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -281,123 +294,151 @@
                   
 
 
-<h1 id="presente-virtual">Presente virtual</h1>
-<p style="text-align: left;">Um pequeno presente para a mulher que é dona do meu coração! Abaixo tem uma playlist com as músicas que me fazem lembrar de você haha </p>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente Virtual</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            position: relative;
+            text-align: center;
+        }
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0WZCwLymGn2n0Ysn2WWvlx?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: all 0.5s ease;
+        }
 
-<p><button id="btn">Toque aqui para uma surpresa</button></p>
-<div id="content" style="display: none;">
-  <p>Obrigado por esses dois meses meu bem!</p>
-  <p>Sou muito grato por ter você em minha vida 💚</p>
-  <p>Que venham vários outros meses ao seu lado 🤠💚 </p>
-  <p>Como você mesma já diz: Obrigado por tudo e por tanto! 💚</p>
-  <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⢠⡾⠲⠶⣤⣀⣠⣤⣤⣤⡿⠛⠿⡴⠾⠛⢻⡆⠀⠀⠀
-⠀⠀⠀⣼⠁⠀⠀⠀⠉⠁⠀⢀⣿⠐⡿⣿⠿⣶⣤⣤⣷⡀⠀⠀
-⠀⠀⠀⢹⡶⠀⠀⠀⠀⠀⠀⠈⢯⣡⣿⣿⣀⣰⣿⣦⢂⡏⠀⠀
-⠀⠀⢀⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠹⣍⣭⣾⠁⠀⠀
-⠀⣀⣸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣸⣧⣤⡀
-⠈⠉⠹⣏⡁⠀⢸⣿⠀⠀⠀⢀⡀⠀⠀⠀⣿⠆⠀⢀⣸⣇⣀⠀
-⠀⠐⠋⢻⣅⡄⢀⣀⣀⡀⠀⠯⠽⠂⢀⣀⣀⡀⠀⣤⣿⠀⠉⠀
-⠀⠀⠴⠛⠙⣳⠋⠉⠉⠙⣆⠀⠀⢰⡟⠉⠈⠙⢷⠟⠈⠙⠂⠀
-⠀⠀⠀⠀⠀⢻⣄⣠⣤⣴⠟⠛⠛⠛⢧⣤⣤⣀⡾⠀⠀⠀⠀⠀</p>
-  <p>Curiosidade: Se você ficar tocando no botão, vai ficar subindo corações haha </p>
-</div>
+        #content {
+            margin-top: 20px;
+            font-size: 20px;
+            display: none;
+        }
 
-<div id="hearts-container"></div>
+        #second-button {
+            display: none;
+        }
 
-<script>
-  document.getElementById("btn").addEventListener("click", function() {
-    // Revelar o texto
-    document.getElementById("content").style.display = 'block';
+        #image-container {
+            display: none;
+            margin-top: 20px;
+        }
 
-    // Criar e animar corações
-    for (let i = 0; i < 10; i++) {
-      createHeart();
-    }
-  });
+        .heart {
+            font-size: 50px;
+            position: absolute;
+            opacity: 0;
+            animation: floatUp 3s forwards;
+            pointer-events: none;
+        }
 
-  function createHeart() {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.textContent = "💚❤️";  // Emoji de coração verde
-    document.getElementById("hearts-container").appendChild(heart);
+        #hearts-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
 
-    // Gerar posições aleatórias para os corações
-    const randomX = Math.random() * window.innerWidth;
-    const randomY = Math.random() * window.innerHeight;
-    heart.style.left = `${randomX}px`;
-    heart.style.top = `${randomY}px`;
+        @keyframes floatUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-300px) scale(1.5);
+            }
+        }
+    </style>
+</head>
 
-    // Animação do coração se espalhando e subindo
-    setTimeout(() => {
-      heart.style.opacity = 10;
-    }, 10);
+<body>
+    <h1>Presente virtual</h1>
+    <p>Um pequeno presente para a mulher que é dona do meu coração!  
+    Abaixo tem uma playlist com as músicas que me fazem lembrar de você haha.</p>
+    <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/0WZCwLymGn2n0Ysn2WWvlx?utm_source=generator" 
+        width="100%" height="152" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+    <button id="btn">Toque aqui</button>
+    <div id="content">
+        <p>Obrigado por esses dois meses meu bem!</p>
+        <p>Sou muito grato por ter você em minha vida 💚</p>
+        <p>Que venham vários outros meses ao seu lado 🤠💚 </p>
+        <p>Como você mesma já diz: Obrigado por tudo e por tanto! 💚</p>
+        <p>Curiosidade: Se você ficar tocando no botão, vai ficar subindo corações haha</p>
+    </div>
+    <button id="second-button">Clique aqui para mais uma surpresa</button>
 
-    // Remover o coração após a animação
-    setTimeout(() => {
-      heart.remove();
-    }, 3000);
-  }
-</script>
 
-<style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    position: relative;
-  }
+  <script>
+    document.getElementById("second-button").addEventListener("click", function() {
+        // Redireciona para outra página (substitua "outra_pagina.md" pelo caminho correto)
+        window.location.href = "https://viniciusfs14.github.io/contador/surpresa/";
+    });
+  </script>
 
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-
-  #content {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 20px;
-    display: none;
-  }
-
-  .heart {
-    font-size: 50px; /* Tamanho do emoji */
-    position: absolute;
-    opacity: 0;
-    animation: floatUp 3s forwards;
-    pointer-events: none;
-  }
-
-  #hearts-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
-
-  @keyframes floatUp {
-    0% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(-300px) scale(1.5);
-    }
-  }
-</style>
+    <div id="hearts-container"></div>
+    <script>
+        document.getElementById("btn").addEventListener("click", function() {
+            let content = document.getElementById("content");
+            let button = document.getElementById("btn");
+            let secondButton = document.getElementById("second-button");
+            // Revelar o texto
+            content.style.display = 'block';
+            // Mover o botão para baixo do conteúdo revelado
+            content.appendChild(button);
+            // Mostrar o segundo botão
+            secondButton.style.display = 'block';
+            // Criar e animar corações
+            for (let i = 0; i < 10; i++) {
+                createHeart();
+            }
+        });
+        document.getElementById("second-button").addEventListener("click", function() {
+            let imageContainer = document.getElementById("image-container");
+            imageContainer.style.display = 'block';
+        });
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.textContent = "💚❤️";  // Emoji de coração
+            document.getElementById("hearts-container").appendChild(heart);
+            // Gerar posições aleatórias para os corações
+            const randomX = Math.random() * window.innerWidth;
+            const randomY = Math.random() * window.innerHeight;
+            heart.style.left = `${randomX}px`;
+            heart.style.top = `${randomY}px`;
+            // Animação do coração se espalhando e subindo
+            setTimeout(() => {
+                heart.style.opacity = 1;
+            }, 10);
+            // Remover o coração após a animação
+            setTimeout(() => {
+                heart.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
 
 
 
