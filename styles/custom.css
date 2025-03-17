@@ -1,12 +1,25 @@
 /* Fundo suave e romântico */
 body {
     background: linear-gradient(to right, #ff9a9e, #fecfef);
+    animation: gradientAnimation 10s ease infinite;
 }
 
 /* Estilizando os títulos */
 h1, h2, h3 {
     font-family: 'Dancing Script', cursive;
     color: #ff3366;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Bordas arredondadas para caixas de texto */
