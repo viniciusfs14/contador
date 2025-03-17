@@ -11,6 +11,8 @@
         <link rel="canonical" href="https://viniciusfs14.github.io/contador/linha/">
       
       
+        <link rel="prev" href="../inicio/">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -48,6 +50,8 @@
     
       <link rel="stylesheet" href="../assets/custom.css">
     
+      <link rel="stylesheet" href="../assets/sara.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -70,6 +74,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#nossa-linha-do-tempo" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -209,6 +218,36 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Linha
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -226,6 +265,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -240,9 +281,110 @@
                   
 
 
-  <h1>Linha</h1>
+<h1 id="nossa-linha-do-tempo">Nossa linha do tempo 📸</h1>
+<p style="text-align: left;">Deixar eternizado alguns de nossos momentos, aproveite e aperte o play para curtir algumas músicas que me faça lembrar de você haha!</p>
 
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0WZCwLymGn2n0Ysn2WWvlx?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
+<p><button id="btn">Clique aqui para ver os corações e o texto!</button></p>
+<div id="content" style="display: none;">
+  <p>Dois meses, mas parece que o tempo ao seu lado é atemporal. Cada instante com você tem sido um sonho que eu nunca imaginei que viveria. O mais lindo disso tudo é saber que esse é apenas o começo de algo incrível. Imagino nosso futuro juntos, cheio de cumplicidade, risos e até desafios, mas com a certeza de que juntos seremos sempre mais fortes. Não existe ninguém mais perfeito para mim do que você, e mal posso esperar para construir todo o amanhã com você ao meu lado. Te amo hoje, te amo amanhã e sempre.</p>
+</div>
+
+<div id="hearts-container"></div>
+
+<script>
+  document.getElementById("btn").addEventListener("click", function() {
+    // Revelar o texto
+    document.getElementById("content").style.display = 'block';
+
+    // Criar e animar corações
+    for (let i = 0; i < 10; i++) {
+      createHeart();
+    }
+  });
+
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.textContent = "💚";  // Emoji de coração verde
+    document.getElementById("hearts-container").appendChild(heart);
+
+    // Gerar posições aleatórias para os corações
+    const randomX = Math.random() * window.innerWidth;
+    const randomY = Math.random() * window.innerHeight;
+    heart.style.left = `${randomX}px`;
+    heart.style.top = `${randomY}px`;
+
+    // Animação do coração se espalhando e subindo
+    setTimeout(() => {
+      heart.style.opacity = 1;
+    }, 10);
+
+    // Remover o coração após a animação
+    setTimeout(() => {
+      heart.remove();
+    }, 3000);
+  }
+</script>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden; /* Impede barras de rolagem */
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  #content {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: none;
+  }
+
+  .heart {
+    font-size: 50px; /* Tamanho do emoji */
+    position: absolute;
+    opacity: 0;
+    animation: floatUp 3s forwards;
+    pointer-events: none;
+  }
+
+  #hearts-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  @keyframes floatUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-300px) scale(1.5);
+    }
+  }
+</style>
 
 
 
