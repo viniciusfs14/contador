@@ -286,9 +286,9 @@
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0WZCwLymGn2n0Ysn2WWvlx?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-<p><button id="btn">Clique aqui para ver os corações e o texto!</button></p>
+<p><button id="btn">Toque aqui para uma surpresa</button></p>
 <div id="content" style="display: none;">
-  <p>Dois meses, mas parece que o tempo ao seu lado é atemporal. Cada instante com você tem sido um sonho que eu nunca imaginei que viveria. O mais lindo disso tudo é saber que esse é apenas o começo de algo incrível. Imagino nosso futuro juntos, cheio de cumplicidade, risos e até desafios, mas com a certeza de que juntos seremos sempre mais fortes. Não existe ninguém mais perfeito para mim do que você, e mal posso esperar para construir todo o amanhã com você ao meu lado. Te amo hoje, te amo amanhã e sempre.</p>
+  <p>Surpresa!!!</p>
 </div>
 
 <div id="hearts-container"></div>
@@ -307,7 +307,7 @@
   function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
-    heart.textContent = "💚";  // Emoji de coração verde
+    heart.textContent = "💚❤️";  // Emoji de coração verde
     document.getElementById("hearts-container").appendChild(heart);
 
     // Gerar posições aleatórias para os corações
@@ -318,7 +318,7 @@
 
     // Animação do coração se espalhando e subindo
     setTimeout(() => {
-      heart.style.opacity = 1;
+      heart.style.opacity = 10;
     }, 10);
 
     // Remover o coração após a animação
